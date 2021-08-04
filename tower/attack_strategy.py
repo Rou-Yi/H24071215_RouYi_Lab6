@@ -51,7 +51,7 @@ class Snipe(AttackStrategy):
     def attack(self, enemies, tower, cd_count):
         for en in enemies.get():
             if in_range(en, tower):
-                en.health = 0
+                en.health = 0  # set enemy health to 0
                 cd_count = 0
                 return cd_count
         return cd_count
